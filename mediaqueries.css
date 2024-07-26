@@ -59,10 +59,10 @@
     .about-containers, .contact-info-upper-container, .btn-container {
         flex-wrap: wrap;
     }
-    .conTact-info-container {
+    .contact-info-container {
         margin: 0;
     }
-    .conTact-info-container p, .nav-links li a {
+    .contact-info-container p, .nav-links li a {
         font-size: 1rem;
     }
     .skills-sub-title {
@@ -89,5 +89,13 @@
     }
     .text-container {
         text-align: justify;
+    }
+    .horizontal-line {
+        flex-direction: column;
+        align-items: center;
+    }
+    .vertical-line {
+        max-width: 90%;
+        margin: 10px 0;
     }
 }
