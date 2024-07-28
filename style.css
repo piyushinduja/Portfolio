@@ -426,16 +426,25 @@ article .icon {
     text-align: center;
 }
 
-/* .btn-conta5iner p {
+/* .btn-container p {
     text-align: center;
     margin: auto;
     font-size: large;
     text-decoration: underline;
 } */
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* INTERNSHIPS SECTION */
 
 #internships {
+    /* padding-bottom: 60px; */
+    margin-bottom: 2rem;
+    /* height: auto; */
     height: 70vh;
 }
 
@@ -449,10 +458,11 @@ article .icon {
 }
 
 .vertical-line {
-    height: 93px;
+    display: flex;
+    flex-direction: column;
     width: 1px;
+    height: 93px;
     background-color: black;
-    /* margin: 0 120px; */
 }
 
 .image-top {
@@ -482,7 +492,8 @@ article .icon {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;
+    /* height: 70vh; */
+    /* padding-bottom: 60px; */
 }
 
 .contact-info-upper-container {
