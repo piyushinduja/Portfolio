@@ -94,7 +94,7 @@
         margin-top: 40px;
     }
     #internships {
-        height: 70rem;
+        height: 130vh;
     }
     .horizontal-line {
         background-color: white;
@@ -109,7 +109,7 @@
         border-radius: 2rem;
         border: rgb(53,53,53) 0.1rem solid;
         padding: 15px;
-        height: 120px;
+        height: 700px;
     }
     .vertical-title {
         display: flex;

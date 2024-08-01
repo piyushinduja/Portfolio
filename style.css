@@ -442,6 +442,7 @@ article .icon {
 /* INTERNSHIPS SECTION */
 
 #internships {
+    position: relative;
     /* padding-bottom: 60px; */
     margin-bottom: 2rem;
     /* height: auto; */
@@ -492,6 +493,7 @@ article .icon {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     /* height: 70vh; */
     /* padding-bottom: 60px; */
 }
