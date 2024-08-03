@@ -443,9 +443,8 @@ article .icon {
 
 #internships {
     position: relative;
-    /* padding-bottom: 60px; */
     margin-bottom: 2rem;
-    /* height: auto; */
+    min-height: fit-content;
     height: 80vh;
 }
 
@@ -490,10 +489,10 @@ article .icon {
 /* CONTACT SECTION */
 
 #contact {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    position: relative;
     /* height: 70vh; */
     /* padding-bottom: 60px; */
 }
