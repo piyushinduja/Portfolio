@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 html {
@@ -33,9 +34,11 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
+    width: 100%;
 }
 
 .nav-links {
+    /* width: 100%; */
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
@@ -187,7 +190,9 @@ section {
 }
 
 .profile-pic {
-    border-radius: 20%;
+    /* border-radius: 20%; */
+    width: 100%;
+    height: 100%;
 }
 
 .section__text {
@@ -275,7 +280,6 @@ section {
 
 #about {
     position: relative;
-    height: 80vh;
 }
 
 .about-containers {
@@ -301,7 +305,7 @@ section {
 
 .arrow {
     position: absolute;
-    right: -5rem;
+    /* right: -2rem; */
     bottom: 2.5rem;
 }
 
@@ -602,6 +606,7 @@ article .icon {
 footer {
     height: 26vh;
     margin: 0 1rem;
+    width: 100%;
 }
 
 footer p {
