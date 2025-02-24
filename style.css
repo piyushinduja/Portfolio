@@ -119,14 +119,23 @@ a:hover {
     color: black;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .menu-links li {
     list-style: none;
 }
 
+/* .menu-links.active {
+    opacity: 1;
+    visibility: visible;
+} */
+
 .menu-links.open {
     max-height: 300px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .hamburger-icon.open span:first-child {
