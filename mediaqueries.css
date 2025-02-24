@@ -183,6 +183,7 @@
 @media screen and (max-width: 480px) {
     .vertical-line {
         padding: 1rem;
+        width: 100%;
     }
 
     .vertical-title p:first-child {

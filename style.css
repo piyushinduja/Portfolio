@@ -178,9 +178,14 @@ section {
     display: flex;
 }
 
-.text-container a:hover{
+.text-container a:hover {
     text-decoration: none;
     color: rgb(85, 85, 85);
+}
+
+.text-container p {
+    margin: auto;
+    padding: 1rem;
 }
 
 /* PROFILE SECTION */
@@ -620,4 +625,5 @@ footer {
 
 footer p {
     text-align: center;
+    width: 100%;
 }
