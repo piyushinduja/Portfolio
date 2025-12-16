@@ -6,15 +6,16 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
     <nav id="desktop-nav">
       <div class="logo">Piyush Hinduja</div>
       <ul class="nav-links">
         <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+        <li><a href="#work_experience">Work Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#internships">Internships</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
     </nav>
@@ -28,9 +29,9 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#recommendations" onclick="toggleMenu()">Recommendations</a></li>
+          <li><a href="#work_experience" onclick="toggleMenu()">Work Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#internships" onclick="toggleMenu()">Internships</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
         </div>
       </div>
@@ -51,7 +52,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/resume.pdf')"
           >
             Download CV
           </button>
@@ -102,15 +103,19 @@
             </div>
             <div class="details-container">
               <img src="./assets/hobbies.png" alt="Hobbies Icon" class="icon" />
-              <h3>Hobbies</h3>
-              <p>Playing Badminton<br />Trekking<br />Watching Movies</p>
+              <h3>In my past time, I love to</h3>
+              <p>explore new places<br />try new food<br />watch TV shows and movies</p>
             </div>
           </div>
           <div class="text-container">
-            <p>Hello, hello! Welcome to my portfolio!
-              Hello, hello! Welcome to my portfolio! I'm Piyush Hinduja, an MS CS student at the University of Utah deeply passionate about Artificial Intelligence, Large Language Models (LLMs), and Generative AI. I love architecting efficient AI models using PyTorch, working with Big Data through Python, SQL, and Spark, and building scalable web applications with the MERN stack. 
-              Whether it's fine-tuning LLMs, exploring the next wave of GenAI applications, or solving real-world problems with data-driven solutions—I’m all in. If you're looking for someone in these domains, I can assure you—you won’t find a better collaborator! 
-              Feel free to explore my skills, projects, and experiences, and don’t hesitate to reach out if you’d like to team up for an exciting project or just chat about the latest in AI over coffee.
+            <p>
+              Hello, hello! Welcome to my portfolio! I'm Piyush Hinduja, an AI Engineer and Data Scientist who's passionate about turning cutting-edge AI into real-world impact. I specialize in fine-tuning custom LLMs and SLMs on domain-specific data, building intelligent RAG-based SaaS platforms, and architecting production-grade ETL pipelines that handle Big Data at scale.
+              <br>
+              Whether it's pushing the boundaries of GenAI applications, optimizing language models for specific use cases, or solving complex data challenges—I bring both technical expertise and genuine enthusiasm to every project. I thrive in collaborative environments and love tackling problems that make a real difference.
+              <br>
+              If you're building something amazing in AI, data science, or GenAI—let's connect! I'm always up for meaningful conversations about the future of AI, brainstorming sessions, or even a casual coffee chat about the latest breakthroughs in the field.
+              <br>
+              Feel free to explore my work below, and don't hesitate to reach out—I'd love to hear what you're working on!
             </p>
           </div>
         </div>
@@ -122,66 +127,93 @@
         onclick="location.href='./#skills'"
       /> -->
     </section>
-    <section id="skills">
+    <section id="recommendations">
+      <p class="section__text__p1">What People Say</p>
+      <h1 class="title">Recommendations</h1>
+      <div class="recommendations-container">
+        <div class="slider-wrapper">
+          <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+          
+          <div class="recommendations-slider">
+            <div class="recommendation-card active">
+              <div class="recommendation-header">
+                <i class="fas fa-quote-left quote-icon"></i>
+              </div>
+              <p class="recommendation-text">
+                "Piyush has worked closely with me for several years to develop a pipeline of different financial research tools for processing large corporate filings. Together, we have constructed and tested cutting edge NLP models for financial research, fine tuned classification models, and passed in billions of tokens to commercial LLMs. Through this process, Piyush has taught me a lot about ETL pipeline development, coding structures, and how to sequentially stage LLMs to minimize hallucinations. If you are serious about finding someone who can add value to your AI team, then Piyush deserves the opportunity. He is personable, dedicated to his work, and thoughtful when using AI tools in practice. Finally, because he won't say it, I will. He knows more about how to actually use and optimize commercial LLMs because we spent years submitting requests, evaluating the results, and refining our methods. Compared to his peers, Piyush is 3 to 5 years ahead when it comes to generating structured data from unstructured sources."
+              </p>
+              <div class="recommender-info">
+                <h3 class="recommender-name">Sean Wareing</h3>
+                <p class="recommender-title">PhD Candidate, University of Utah & Co-Founder, Wareing Motors Sturgis</p>
+              </div>
+            </div>
+    
+            <div class="recommendation-card">
+              <div class="recommendation-header">
+                <i class="fas fa-quote-left quote-icon"></i>
+              </div>
+              <p class="recommendation-text">
+                "Piyush is an awesome dev. Self starter. Great learner. He will dig in and wrap his head around a project really well and stick with it till execution. "
+              </p>
+              <div class="recommender-info">
+                <h3 class="recommender-name">Brett Evanson</h3>
+                <p class="recommender-title">CTO, Squeeze Media</p>
+              </div>
+            </div>
+          </div>
+    
+          <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+      </div>
+    </section>    
+    <!-- <section id="skills">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
       <div class="skills-details-container">
         <div class="about-containers">
           <div class="details-container-1">
-            <h2 class="skills-sub-title">Programming Languages</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Python</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Java</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>C Progg</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>C++</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>JavaScript</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>SQL</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>TypeScript</h3>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Dart</h3>
-              </article>
-            </div>
-          </div>
-          <div class="details-container-1">
             <h2 class="skills-sub-title">Artificial Intelligence</h2>
             <div class="article-container">
               <article>
                 <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Machine Learning</h3>
+                <h3>Supervised Fine-Tuning</h3>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Natural Language Processing</h3>
+                <h3>Domain-Adaptive Pre-Training</h3>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Deep Learning</h3>
+                <h3>RAG Systems</h3>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="*" class="icon" />
-                <h3>Computer Vision</h3>
+                <h3>ETL Pipelines</h3>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="*" class="icon" />
+                <h3>LLM API Integration</h3>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="*" class="icon" />
+                <h3>AWS SageMaker</h3>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="*" class="icon" />
+                <h3>Databricks</h3>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="*" class="icon" />
+                <h3>PyTorch</h3>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="*" class="icon" />
+                <h3>PySpark</h3>
               </article>
             </div>
           </div>
@@ -206,7 +238,7 @@
               </article>
             </div>
           </div>
-          <!-- <div class="details-container">
+          <div class="details-container">
                     <h2 class="skills-sub-title">Software Tools</h2>
                     <div class="article-container">
                         <article>
@@ -234,14 +266,80 @@
                             <h3>Postman</h3>
                         </article>
                     </div>
-                </div> -->
+                </div>
+        </div>
+      </div>
+      <img
+        src="./assets//arrow.png"
+        alt="Sroll Down"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section> -->
+    <section id="work_experience">
+      <p class="section__text__p1">Know about my top</p>
+      <h1 class="title">Work Experiences</h1>
+      <div class="horizontal-line">
+        <div class="vertical-line">
+          <img class="image-top" src="./assets//data-analyst.png" alt="" />
+          <div class="vertical-title">
+            <p>AI Engineer</p>
+            <p>University of Utah (03/2024 - Present)</p>
+          </div>
+          <p class="vertical-desc">
+            Architecting a model to track changes in 10-K filings over time, analyzing forward-looking intensity, document length, and financial tone based on insights from Muslu et al.'s 2015 study.
+Achieved a 27% increase in forward-looking statement identification by improving data preprocessing and reducing per-filing processing time by 40%. Implementing AI-driven analysis by prompting ChatGPT, comparing AI generated outputs against manually coded algorithms to measure performance and efficiency.
+          </p>
+        </div>
+        <div class="vertical-line">
+          <img class="image-top" src="./assets//iot.png" alt="" />
+          <div class="vertical-title">
+            <p>AI Engineer</p>
+            <p>Giant Analytics (07/2025 - Present)</p>
+          </div>
+          <div class="vertical-desc">
+            Fine-tuning decoder-only models, like LLaMA 3.1, on Indian Law data extracted via Indian Kanoon and Bharat Law APIs for domain-specific legal reasoning using AWS SageMaker and S3.
+            Integrated the model into a RAG-based SaaS platform that retrieves and cites relevant cases during chat; projected to boost answer accuracy from 56% to 93%, significantly outperforming generic OpenAI & Gemini models.
+          </div>
+        </div>
+        <div class="vertical-line">
+          <img class="image-top" src="./assets//web-developer.png" alt="" />
+          <div class="vertical-title">
+            <p>Software Developer</p>
+            <p>Squeeze Media (05/2025 - 06/2025)</p>
+          </div>
+          <div class="vertical-desc">
+            Built an AI-powered warm transfer system for inbound/outbound Twilio calls using FastAPI, Deepgram SST, and WebSocket streaming.
+            Increased company sales by 28% by ensuring more customers completed their calls without drop-offs or repeated queries.
+          </div>
+        </div>
+        <div class="vertical-line">
+          <img class="image-top" src="./assets//campus-ambassador.png" alt="" />
+          <div class="vertical-title">
+            <p>ML Researcher</p>
+            <p>FLUX Research Group (08/2024 - 04/2025)</p>
+          </div>
+          <div class="vertical-desc">
+            Architected and implemented a comprehensive CloudLab profile enabling seamless integration of NVIDIA drivers and CUDA toolkit, reducing environment setup time by 90% and benefiting 50+ researchers across multiple projects.
+Collaborating with the Wireless Powder Testbed team to implement predictive modeling solutions focusing on enhancing experimental outcomes through machine learning applications for a network of 10000+ UEs (User Equipments).
+          </div>
+        </div>
+        <div class="vertical-line">
+          <img class="image-top" src="./assets//committee-head.png" alt="" />
+          <div class="vertical-title">
+            <p>Committee Head</p>
+            <p>ISTE-TSEC (06/2021 - 05/2022)</p>
+          </div>
+          <div class="vertical-desc">
+            Led a team of 25 students to successfully organize two 3-day festivals and four individual events. Core responsibilities included fundraising, event planning, and overseeing team activities. This role significantly enhanced my leadership, management, and teamwork skills, making it one of the most rewarding experiences of my college life.
+          </div>
         </div>
       </div>
       <!-- <img
         src="./assets//arrow.png"
         alt="Sroll Down"
         class="icon arrow"
-        onclick="location.href='./#projects'"
+        onclick="location.href='./#contact'"
       /> -->
     </section>
     <section id="projects">
@@ -249,6 +347,46 @@
       <h1 class="title">Projects</h1>
       <div class="skills-details-container">
         <div class="project-containers">
+          <div class="project-details-container color-container">
+            <!-- <div class="article-container">
+                    <img src="./assets/project-3.png" alt="Project 3" class="project-img"/>
+                </div> -->
+            <div>
+              <h2 class="skills-sub-title project-title">SEC Comment Letter Analysis</h2>
+              <p class="project-text">
+                Engineered a rolling-window algorithm to process and bundle SEC comment letter conversations, analyzing data from 50,000+ companies via the EDGAR database. Designed an OCR pipeline using the EasyOCR library to extract text from PDFs with 95% accuracy, processing 2-page documents in under 2 seconds. Constructed prompt-based labeling system using Claude API to classify letter content with 98.25% accuracy, integrating metadata for contextual inference.
+              </p>
+            </div>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='//github.com/piyushinduja/Language-Modeling'"
+              >
+                GitHub
+              </button>
+            </div> -->
+          </div>
+          <div class="project-details-container color-container">
+            <!-- <div class="article-container">
+                    <img src="./assets/project-3.png" alt="Project 3" class="project-img"/>
+                </div> -->
+            <div>
+              <h2 class="skills-sub-title project-title">
+                Wireless Spectrum Analysis - Research Project
+              </h2>
+              <p class="project__text">
+                Engineered automated deployment system using Python and Linux Bash to streamline NVIDIA/CUDA toolkit integration on high-performance computing clusters, reducing overhead by 90%. Analyzed wireless spectrum data to uncover scientific insights and optimize power distribution across 20+ campus routing devices.
+              </p>
+            </div>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='//github.com/piyushinduja/Symptom-Based-Disease-Detector'"
+              >
+                GitHub
+              </button>
+            </div> -->
+          </div>
           <div class="project-details-container color-container">
             <!-- <div class="article-container">
                     <img src="./assets/project-2.png" alt="Project 2" class="project-img"/>
@@ -270,31 +408,6 @@
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='//github.com/piyushinduja/Road-Damage-Detection'"
-              >
-                GitHub
-              </button>
-            </div>
-          </div>
-          <div class="project-details-container color-container">
-            <!-- <div class="article-container">
-                    <img src="./assets/project-3.png" alt="Project 3" class="project-img"/>
-                </div> -->
-            <div>
-              <h2 class="skills-sub-title project-title">Language Modeling</h2>
-              <p class="project-text">
-                Implemented character-level language models using both LSTM and
-                N-gram approaches to predict sequences of characters based on
-                input sequences. The LSTM model, a recurrent neural network,
-                demonstrated strong predictive performance by accurately
-                predicting the next character in a sequence. Meanwhile, the
-                N-gram model, implemented with Laplace smoothing, effectively
-                estimated the probabilities of character sequences.
-              </p>
-            </div>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='//github.com/piyushinduja/Language-Modeling'"
               >
                 GitHub
               </button>
@@ -349,106 +462,13 @@
               </button>
             </div>
           </div>
-          <div class="project-details-container color-container">
-            <!-- <div class="article-container">
-                    <img src="./assets/project-3.png" alt="Project 3" class="project-img"/>
-                </div> -->
-            <div>
-              <h2 class="skills-sub-title project-title">
-                Symptom Based Disease Detector
-              </h2>
-              <p class="project__text">
-                Created a Deep Learning model to recommend drugs based on
-                patient symptoms using two distinct neural network architectures
-                in PyTorch: an LSTM with GloVe embeddings and a BERT-mini
-                classifier. Attained F1 scores of 77.43% with the BERT-mini
-                model and 70.71% with the LSTM model by optimizing batch sizes
-                and learning rates for effective symptom-based classification.
-              </p>
-            </div>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='//github.com/piyushinduja/Symptom-Based-Disease-Detector'"
-              >
-                GitHub
-              </button>
-            </div>
-          </div>
         </div>
       </div>
       <!-- <img
         src="./assets//arrow.png"
         alt="Sroll Down"
         class="icon arrow"
-        onclick="location.href='./#internships'"
-      /> -->
-    </section>
-    <section id="internships">
-      <p class="section__text__p1">Know about my</p>
-      <h1 class="title">Internships and Committee Works</h1>
-      <div class="horizontal-line">
-        <div class="vertical-line">
-          <img class="image-top" src="./assets//data-analyst.png" alt="" />
-          <div class="vertical-title">
-            <p>Data Analyst</p>
-            <p>University of Utah (03/2024 - Present)</p>
-          </div>
-          <p class="vertical-desc">
-            Architecting a model to track changes in 10-K filings over time, analyzing forward-looking intensity, document length, and financial tone based on insights from Muslu et al.'s 2015 study.
-Achieved a 27% increase in forward-looking statement identification by improving data preprocessing and reducing per-filing processing time by 40%. Implementing AI-driven analysis by prompting ChatGPT, comparing AI generated outputs against manually coded algorithms to measure performance and efficiency.
-          </p>
-        </div>
-        <div class="vertical-line">
-          <img class="image-top" src="./assets//campus-ambassador.png" alt="" />
-          <div class="vertical-title">
-            <p>ML Researcher</p>
-            <p>FLUX Research Group (08/2024 - 04/2025)</p>
-          </div>
-          <div class="vertical-desc">
-            Architected and implemented a comprehensive CloudLab profile enabling seamless integration of NVIDIA drivers and CUDA toolkit, reducing environment setup time by 90% and benefiting 50+ researchers across multiple projects.
-Collaborating with the Wireless Powder Testbed team to implement predictive modeling solutions focusing on enhancing experimental outcomes through machine learning applications for a network of 10000+ UEs (User Equipments).
-          </div>
-        </div>
-        <div class="vertical-line">
-          <img class="image-top" src="./assets//committee-head.png" alt="" />
-          <div class="vertical-title">
-            <p>Committee Head</p>
-            <p>ISTE-TSEC (06/2021 - 05/2022)</p>
-          </div>
-          <div class="vertical-desc">
-            Led a team of 25 students to successfully organize two 3-day festivals and four individual events. Core responsibilities included fundraising, event planning, and overseeing team activities. This role significantly enhanced my leadership, management, and teamwork skills, making it one of the most rewarding experiences of my college life.
-          </div>
-        </div>
-        <div class="vertical-line">
-          <img class="image-top" src="./assets//web-developer.png" alt="" />
-          <div class="vertical-title">
-            <p>Web Developer</p>
-            <p>Exposys Data Labs (06/2021 - 07/2021)</p>
-          </div>
-          <div class="vertical-desc">
-            Spearheaded the launch of a tourism project, integrating key features to enhance user experience and deliver valuable information about 50+ Indian travel destinations.
-Utilized MERN stack for an efficient frontend and backend integration, creating a responsive, user-friendly interface and enabling content management.
-          </div>
-        </div>
-        <div class="vertical-line">
-          <img class="image-top" src="./assets//iot.png" alt="" />
-          <div class="vertical-title">
-            <p>Internet Of Things Trainee</p>
-            <p>Enovate Skill (06/2020 - 07/2020)</p>
-          </div>
-          <div class="vertical-desc">
-            Created and simulated IoT models using platforms like Tinkercad to
-            test designs virtually. Designed and built various Tinkercad
-            simulators, including fire alarm systems and temperature sensors.
-          </div>
-        </div>
-      </div>
-      <!-- <img
-        src="./assets//arrow.png"
-        alt="Sroll Down"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
+        onclick="location.href='./#work_experience'"
       /> -->
     </section>
     <section id="contact">
@@ -490,9 +510,9 @@ Utilized MERN stack for an efficient frontend and backend integration, creating 
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#work_experience">Work Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#internships">Internships</a></li>
             <li><a href="#contact">Contact Me</a></li>
           </ul>
         </div>
@@ -504,10 +524,10 @@ Utilized MERN stack for an efficient frontend and backend integration, creating 
     <script>
       var typed = new Typed("#element", {
         strings: [
-          "a Computer Science Grad",
-          "a Machine Learning Enthusiast",
-          "a Data Analyst",
-          "a LLMs and GenAI lover",
+          "an AI/ML Engineer",
+          "a Data Scientist",
+          "a LLMs and GenAI Enthusiast",
+          "a CS Grad",
         ],
         typeSpeed: 60,
       });
