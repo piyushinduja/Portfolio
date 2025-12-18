@@ -43,5 +43,5 @@ function currentSlide(index) {
 // Optional: Auto-play slider
 setInterval(() => {
   changeSlide(1);
-}, 8000); // Change slide every 8 seconds
+}, 16000); // Change slide every 16 seconds
 
